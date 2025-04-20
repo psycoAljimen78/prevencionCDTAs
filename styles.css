@@ -211,4 +211,8 @@ body {
      .modal-dialog {
          margin: 0.5rem; /* Reduce margin on small screens */
      }
+      /* Adjust video max-width on small screens */
+    .video-container {
+        max-width: 100%;
+    }
   }
