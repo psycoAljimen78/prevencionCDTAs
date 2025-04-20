@@ -1,0 +1,214 @@
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    background-color: #f5f7fa; /* Soft light background */
+    color: #333; /* Dark grey for text */
+    padding-top: 60px; /* Space for fixed header */
+  }
+  
+  /* Header Styles */
+  header {
+    background-color: #e0f2f1; /* Light teal */
+    border-bottom: 1px solid #b2dfdb; /* Slightly darker border */
+    z-index: 1030; /* Ensure header is above other content (Bootstrap default modal z-index is 1050, so modal will be above header) */
+    padding: 0.5rem 0; /* Adjust padding */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  }
+  
+  header h1, header h2 {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #004d40; /* Darker teal */
+  }
+  
+  header h2 {
+    font-size: 1rem;
+    font-weight: 400;
+    color: #00796b; /* Medium teal */
+    margin-top: 0.25rem;
+  }
+  
+  .logo-img {
+    height: 40px; /* Adjust logo height as needed */
+    width: auto;
+    max-width: 100px; /* Prevent logo from being too wide on small screens */
+  }
+  
+  /* Reading Progress Bar */
+  .progress-bar-top {
+      position: absolute; /* Position relative to the header */
+      bottom: 0; /* Align to the bottom of the header */
+      left: 0;
+      height: 4px; /* Thickness of the bar */
+      background-color: #ff9800; /* Orange accent */
+      width: 0%; /* Starts at 0 */
+      transition: width 0.1s ease-out; /* Smooth transition */
+      z-index: 1031; /* Above the header content */
+  }
+  
+  
+  /* Modal Styles */
+  .scrollable-modal-body {
+    max-height: 70vh; /* Limit height to make it scrollable */
+    overflow-y: auto; /* Enable vertical scrolling */
+    padding: 1.5rem;
+    background-color: #ffffff; /* White background for content */
+  }
+  
+  .modal-body ul {
+    padding-left: 1.5rem; /* Indent lists */
+  }
+  
+  .modal-body li {
+    margin-bottom: 0.75rem; /* Space between list items */
+  }
+  
+  .modal-body i {
+      color: #00796b; /* Teal icons */
+  }
+  
+  /* Training Sections */
+  .training-section {
+    margin-bottom: 3rem; /* Space between sections */
+    padding: 1.5rem;
+    background-color: #ffffff; /* White background for sections */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+  }
+  
+  .training-section h2 {
+    color: #004d40; /* Darker teal */
+    border-bottom: 2px solid #b2dfdb; /* Underline section title */
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+  }
+  
+  .training-section h3 {
+    color: #00796b; /* Medium teal */
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+  }
+  
+  .training-section ul {
+    padding-left: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .training-section li {
+    margin-bottom: 0.5rem;
+  }
+  
+  .training-section i {
+      color: #00796b; /* Teal icons for lists */
+      margin-right: 0.5rem;
+  }
+  
+  .card {
+      border: none;
+      box-shadow: none; /* Remove default card shadow */
+      background-color: transparent; /* Make card background transparent */
+  }
+  
+  .card-body {
+      padding: 0; /* Remove default card body padding if content has its own */
+  }
+  
+  .card-title i {
+      color: #004d40; /* Darker teal for card title icons */
+  }
+  
+  a {
+    color: #0277bd; /* Blue for links */
+    text-decoration: none; /* Remove default underline */
+  }
+  
+  a:hover {
+    text-decoration: underline; /* Add underline on hover */
+  }
+  
+  .google-forms-placeholder {
+      background-color: #e3f2fd; /* Light blue background */
+      border: 1px dashed #90caf9; /* Dashed border */
+      padding: 20px;
+      text-align: center;
+      margin-top: 20px;
+      border-radius: 5px;
+      color: #1565c0; /* Darker blue text */
+  }
+  
+  /* Responsiveness */
+  
+  /* Tablet (≥768px and <1024px) */
+  @media (min-width: 768px) and (max-width: 1023.98px) {
+    header h1 {
+      font-size: 1.4rem;
+    }
+    header h2 {
+      font-size: 1.1rem;
+    }
+    .logo-img {
+      height: 45px;
+    }
+    .training-section h2 {
+        font-size: 1.6rem;
+    }
+    .training-section h3 {
+        font-size: 1.3rem;
+    }
+  }
+  
+  /* Mobile (<768px) */
+  @media (max-width: 767.98px) {
+    header {
+      padding: 0.75rem 0;
+    }
+    header h1 {
+      font-size: 1rem;
+      text-align: left;
+    }
+     header h2 {
+      font-size: 0.8rem;
+      text-align: left;
+      margin-top: 0;
+    }
+    .logo-img {
+      height: 35px;
+    }
+    header .row {
+      align-items: flex-start;
+    }
+    header .col-auto:last-child { /* Adjust spacing if needed */
+      display: none; /* Hide the empty col */
+    }
+    header .col {
+      padding-left: 0.5rem;
+      padding-right: 0.5rem;
+    }
+  
+    body {
+        padding-top: 80px; /* More space for header on mobile */
+    }
+  
+    .training-section {
+      padding: 1rem;
+      margin-bottom: 2rem;
+    }
+     .training-section h2 {
+        font-size: 1.3rem;
+     }
+     .training-section h3 {
+        font-size: 1.1rem;
+     }
+     .scrollable-modal-body {
+       max-height: 80vh; /* Allow modal to be taller on small screens */
+     }
+     .modal-dialog {
+         margin: 0.5rem; /* Reduce margin on small screens */
+     }
+  }

@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cápsula: Prevención Suicida y Autolesiva</title>
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <!-- Google Fonts (Roboto for readability) -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <!-- Icono URL -->
+  <link rel="icon" type="image/png" href="logo.png">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Fixed Header -->
+  <header class="fixed-top bg-light shadow-sm py-2">
+    <div class="container-fluid">
+      <div class="row align-items-center">
+        <div class="col-auto">
+          <!-- Logo Placeholder -->
+          <img src="logo.png" alt="Logotipo de Organización" class="logo-img">
+        </div>
+        <div class="col text-center">
+          <h1>Congregación Siervas de Cristo Sacerdote <br> Hogar Sagrada Familia, Bogotá</h1> <!-- Replace with your organization name -->
+          <h2>CÁPSULA DE INFORMACIÓN <br> Prevención y Manejo de la Conducta Suicida, y la Conducta Autolesiva</h2>
+        </div>
+        <div class="col-auto">
+          <!-- Space for alignment or additional icon -->
+        </div>
+      </div>
+    </div>
+    <!-- Reading Progress Bar -->
+    <div id="progressBar" class="progress-bar-top"></div>
+  </header>
+
+  <!-- Main Content Area (with padding to clear fixed header) -->
+  <main class="container mt-5 pt-5 pb-3">
+
+    <!-- Initial Warning Modal -->
+    <div class="modal fade" id="warningModal" tabindex="-1" aria-labelledby="warningModalLabel" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="warningModalLabel">Nota Importante</h5>
+            <!-- No close button here -->
+          </div>
+          <div class="modal-body scrollable-modal-body">
+            <p>Debido al carácter de la información contenida en la presente puede motivar comportamientos autolesivos y la conducta suicida en las beneficiarias, esta cápsula será presentada de manera que cada colaborador pueda consultarla y realizarla desde su lugar de trabajo. La cápsula ilustra de manera práctica esta situación de riesgo, pero es responsabilidad de cada colaborador de apropiarse de la información contenida en los lineamientos de ICBF vigentes, profundizando en los documentos citados en los enlaces disponibles.</p>
+
+            <h3>Recomendación para tener en cuenta antes de seguir esta cápsula dirigida a los colaboradores del Hogar sobre comunicación en conducta suicida</h3>
+            <p>Cuando recibas materiales o mensajes de capacitación sobre conducta suicida, es muy importante que tengas en cuenta lo siguiente:</p>
+
+            <ul>
+              <li><i class="bi bi-chat-square-text me-2"></i><strong>Habla con cuidado y sin sensacionalismo:</strong> Usa palabras simples y evita explicar de forma detallada cómo se comete un suicidio. No des la impresión de que quitarse la vida es una solución a los problemas.</li>
+              <li><i class="bi bi-lightbulb me-2"></i><strong>Enfócate en la prevención:</strong> Resalta siempre que, aunque un joven pueda sentirse muy triste o abrumado, existen muchas maneras de buscar ayuda. Explica que hablar de sus sentimientos y buscar apoyo (por ejemplo, con familiares, amigos, o profesionales de salud) es lo más importante.</li>
+              <li><i class="bi bi-bookmark-x me-2"></i><strong>No glorifiques la conducta suicida:</strong> Evita mostrar el suicidio como algo "heroico” o como una salida fácil. En lugar de eso, comparte ejemplos de personas que han superado momentos muy difíciles y han encontrado ayuda.</li>
+              <li><i class="bi bi-shield-lock me-2"></i><strong>Protege la privacidad y el respeto:</strong> Cuando se habla de casos reales, cuida no revelar datos personales ni imágenes que puedan lastimar a la familia o a otros jóvenes (dentro o fuera del Hogar).</li>
+              <li><i class="bi bi-info-circle me-2"></i><strong>Usa información clara y recursos útiles:</strong> Asegúrate de incluir o pedir información sobre dónde pueden buscar ayuda (líneas de crisis, centros de salud, orientaciones, etc.) y explica que cada persona merece apoyo y comprensión.</li>
+            </ul>
+
+            <p>Recuerda que la manera en que se habla del tema puede marcar la diferencia en la vida de una adolescente vulnerable. Si algo no te queda claro en la capacitación, pregunta o busca el apoyo de un especialista. Tu papel es fundamental para que nuestras beneficiarias sepan que no están solas y que siempre hay una opción para recibir ayuda.</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" id="confirmReadBtn" disabled>Confirmo que he leído todo</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Diapositiva 1 content is in the modal -->
+
+    <!-- Diapositiva 2: Definiciones y Factores de Riesgo -->
+    <section id="diapositiva2" class="training-section">
+      <h2>DEFINICIONES Y FACTORES DE RIESGO</h2>
+      <div class="card">
+        <div class="card-body">
+            <p><iframe width="560" height="315" src="https://www.youtube.com/embed/ALyuA5b7m7c?si=ApaSjzvcYYquJ3Kn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
+          <h3 class="card-title"><i class="bi bi-question-circle me-2"></i>¿Qué es el suicidio?</h3>
+          <p class="card-text">Es la muerte que resulta del uso de cualquier método (envenenamiento, ahorcamiento, herida por arma, lanzamiento al vacío, etc.) con evidencia de que fue autoinfligido y con la intención de provocar el propio fallecimiento.</p>
+
+          <h3 class="card-title"><i class="bi bi-question-circle me-2"></i>¿Qué es la conducta suicida?</h3>
+          <p class="card-text">Son todas las acciones que indican intención, pensamiento o acción <b>cuyo fin es el de atentar contra la vida propia</b>, incluyendo:</p>
+          <ul>
+            <li>Ideación suicida (pensamientos)</li>
+            <li>Amenaza suicida (expresión verbal)</li>
+            <li>Intento de suicidio (acción)</li>
+          </ul>
+
+          <h3 class="card-title"><i class="bi bi-exclamation-triangle me-2"></i>Factores de riesgo principales:</h3>
+          <ul>
+            <li>Eventos estresantes (abuso sexual, violencia familiar, acoso)</li>
+            <li>Antecedentes de intento de suicidio</li>
+            <li>Trastornos mentales</li>
+            <li>Consumo de sustancias psicoactivas</li>
+            <li>Aislamiento social</li>
+            <li>Problemas de comunicación</li>
+            <li>Historial familiar de suicidio</li>
+            <li>Pérdidas recientes</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Diapositiva 3: Señales de Alerta y Evaluación del Riesgo -->
+    <section id="diapositiva3" class="training-section">
+      <h2>SEÑALES DE ALERTA Y EVALUACIÓN DEL RIESGO</h2>
+      <div class="card">
+        <div class="card-body">
+          <h3 class="card-title"><i class="bi bi-bell me-2"></i>Señales de alerta para identificar:</h3>
+          <ul>
+            <li>Expresiones verbales sobre querer morir</li>
+            <li>Aislamiento repentino de compañeras, familia y cuidadores</li>
+            <li>Regalo de pertenencias valiosas</li>
+            <li>"Evasión de actividades"</li>
+            <li>Cambios drásticos en su estado de ánimo</li>
+            <li>Tristeza persistente o desesperanza</li>
+            <li>Problemas para concentrarse o tomar decisiones</li>
+            <li>Pérdida reciente de un ser querido</li>
+            <li>Acceso a medios letales</li>
+            <li>Señales de lesiones autoinflingidas (ej. cutting)</li>
+          </ul>
+
+          <h3 class="card-title"><i class="bi bi-bar-chart-steps me-2"></i>¿Cómo evaluar el nivel de riesgo? Mayor riesgo si:</h3>
+          <ul>
+            <li>Tiene un plan definido</li>
+            <li>Cuenta con los medios para llevarlo a cabo</li>
+            <li>Planea hacerlo inmediatamente</li>
+            <li>Presenta varios factores de riesgo simultáneamente</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Diapositiva 4: Responsabilidades del Operador -->
+    <section id="diapositiva4" class="training-section">
+      <h2>RESPONSABILIDADES DEL OPERADOR</h2>
+      <div class="card">
+        <div class="card-body">
+          <h3 class="card-title"><i class="bi bi-clipboard-check me-2"></i>Acciones inmediatas ante riesgo detectado:</h3>
+          <ol>
+            <li><strong>Evaluar al ingreso:</strong> Condiciones emocionales, consumo de sustancias, enfermedades.</li>
+            <li><strong>Identificar factores de riesgo:</strong> Determinar el nivel de riesgo de ideación o intento.</li>
+            <li><strong>Activar protocolo de emergencia:</strong>
+              <ul>
+                <li><i class="bi bi-telephone me-2"></i>Intento de suicidio: Llamar a emergencia de la EPS (intervención urgente antes de 72 horas)</li>
+                <li><i class="bi bi-hospital me-2"></i>Ideación suicida: Solicitar cita en atención primaria en salud mental</li>
+                <li><i class="bi bi-person-check me-2"></i>Casos en población indígena: Informar a la EPS esta característica para enfoque diferencial, informar a la autoridad admnistrativa e indígena</li>
+              </ul>
+            </li>
+          </ol>
+
+          <h3 class="card-title"><i class="bi bi-book me-2"></i>Comunicación y registro:</h3>
+          <ol>
+            <li>Informar a la autoridad administrativa por escrito</li>
+            <li>Notificar a la familia o red vincular</li>
+            <li>Remitir informe de seguimiento (máximo 5 días calendario)</li>
+            <li>Reportar en el registro PRD_937 del SIM y seguimiento en PRD_938 (registros de defensoría)</li>
+            <li>Completar mensualmente el Formato Matriz de eventos</li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- Diapositiva 5: Recursos Adicionales -->
+    <section id="diapositiva5" class="training-section">
+      <h2>RECURSOS PARA PROFUNDIZAR</h2>
+      <div class="card">
+        <div class="card-body">
+          <h3 class="card-title"><i class="bi bi-camera-video me-2"></i>Videos recomendados:</h3>
+          <ul>
+            <li>Suicidio y autolesión. American Psychiatric Association (2022) - <a href="https://www.youtube.com/watch?v=ALyuA5b7m7c" target="_blank">Enlace a YouTube <i class="bi bi-box-arrow-up-right"></i></a></li>
+            <li>Prevención del suicidio: Información para profesores. World Health Organization (2019) 58 segundos de duración - <a href="https://www.youtube.com/watch?v=JBKMMM72kjU" target="_blank">Enlace a YouTube <i class="bi bi-box-arrow-up-right"></i></a></li>
+          </ul>
+
+          <h3 class="card-title"><i class="bi bi-globe2 me-2"></i>Sitios web y líneas de ayuda:</h3>
+          <ul>
+            <li>Línea de los niños, niñas y adolescentes 106. Secretaría Distrital de Salud de Bogotá - <a href="https://www.saludcapital.gov.co/paginas2/linea106-inicio.aspx" target="_blank">Enlace <i class="bi bi-box-arrow-up-right"></i></a></li>
+            <li>Línea de emergencias 123</li>
+            <li>Líneas de atención en salud mental y prevención de violencias. Alcaldía Mayor de Bogotá - <a href="https://bogota.gov.co/mi-ciudad/salud/cuales-son-las-lineas-de-atencion-en-salud-mental-en-bogota" target="_blank">Enlace <i class="bi bi-box-arrow-up-right"></i></a></li>
+          </ul>
+
+          <h3 class="card-title"><i class="bi bi-book-half me-2"></i>Manuales para profundizar:</h3>
+          <ul>
+            <li>Kit de herramientas Colombia Aprende para la prevención del suicidio. Ministerio de Educación Nacional - <a href="https://www.colombiaaprende.edu.co/recurso-coleccion/prevencion-del-suicidio" target="_blank">Enlace <i class="bi bi-box-arrow-up-right"></i></a></li>
+            <li>Salud mental en Bogotá: estrategias clave para prevenir el suicidio. Alcaldía Mayor de Bogotá (2024) - <a href="https://bogota.gov.co/mi-ciudad/salud/salud-mental-en-bogota-estrategias-clave-para-prevenir-el-suicidio" target="_blank">Enlace <i class="bi bi-box-arrow-up-right"></i></a></li>
+            <li><b>Guía de orientaciones para la prevención y manejo de situaciones de riesgo de niños, niñas y adolescentes, versión 7. ICBF (2023)</b> - <a href="https://drive.google.com/file/d/1o5DDY1PDzOooKVII3b2elcs5S8Cu1uWZ/view?usp=sharing" target="_blank">Enlace <i class="bi bi-box-arrow-up-right"></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Diapositiva 6: Cuestionario de Evaluación (Placeholder) -->
+    <section id="evaluacion" class="training-section">
+      <h2>CUESTIONARIO DE EVALUACIÓN</h2>
+      <div class="card">
+        <div class="card-body">
+          <p>Por favor, complete el siguiente cuestionario para evaluar su comprensión de la cápsula.</p>
+          <!-- Aquí insertarás luego un iframe con tu formulario de Google Forms -->
+          <div class="google-forms-placeholder">
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScsrY1iz2GUE2KrK7JBXovLzHD28R_WPgRcaWfxfjxchlMLkQ/viewform?embedded=true" width="640" height="1990" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
+             <!-- Ejemplo: -->
+             <!-- <iframe src="TU_ENLACE_DEL_FORMULARIO_EMBEBIDO" width="640" height="900" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe> -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+     <!-- Diapositiva 7: Actividad Práctica -->
+    <section id="diapositiva7" class="training-section">
+      <h2>ACTIVIDAD PRÁCTICA</h2>
+      <div class="card">
+        <div class="card-body">
+          <h3 class="card-title"><i class="bi bi-puzzle me-2"></i>RETO: "Cadena de Apoyo"</h3>
+          <p><strong>Tiempo:</strong> 10 minutos</p>
+          <p><strong>Recursos necesarios:</strong> Papel, lápiz, celular con cámara</p>
+
+          <h3 class="card-title">Misión:</h3>
+          <p>¡Eres Constructor/a de Esperanza! Crea una cadena de mensajes de apoyo.</p>
+
+          <h3 class="card-title">Pasos:</h3>
+          <ol>
+            <li>Corta una hoja en 3 tiras</li>
+            <li>En cada tira escribe:
+              <ul>
+                <li>Una frase de apoyo</li>
+                <li>Una acción a desarrollar (ver página 33 de la Guía de orientaciones V.7)</li>
+                <li>Un factor protector en medio institucional (ver página 32 de la Guía de orientaciones V.7)</li>
+              </ul>
+            </li>
+            <li>Une las tiras formando una cadena</li>
+            <li>Tómate la foto junto a la cadena con los eslabones que elaboraste y enviala al grupo de WhatsApp</li>
+            <li>Une tu cadena a la de tus compañeros en el rincón de la Cápsula de Formación en la cartelera con el título #YoConstruyoEsperanza</li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-light text-center text-muted py-3 mt-4">
+    <p>© 2025 Hogar Sagrada Familia, Bogotá. Todos los derechos reservados.</p>
+    <p>Cápsula de Información para Colaboradores.</p>
+  </footer>
+
+  <!-- Bootstrap 5 JS (popper.js included) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Custom JS -->
+  <script src="app.js"></script>
+</body>
+</html>
